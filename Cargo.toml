@@ -1,0 +1,13 @@
+[workspace]
+resolver = "3"
+members = ["bin", "demo_client", "shared"]
+
+[workspace.dependencies]
+bevy = { version = "0.18", default-features = false, features = [
+    "multi_threaded",
+] }
+bevy_renet = "=4.0.1"
+renet = "2.0.0"
+wasvy = "0.0.8"
+serde = { version = "1", features = ["derive"] }
+shared = { path = "./shared" }
